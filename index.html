@@ -1,54 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Auto Refresh on Commit</title>
+    <title>Live Score Example</title>
 </head>
 <body>
-    <h1>Sateej</h1>
-	  <table border="1">
-        <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header3</th>
-        </tr>
-        <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
-        </tr>
-        <tr>
-            <td>Data 4</td>
-            <td>Data 5</td>
-            <td>Data 6</td>
-        </tr>
+    <h1>Live Score</h1>
+    <div id="live-score"></div>
+
     <script>
-	(function () {
-    // Set the interval (in milliseconds) at which you want to check for changes and refresh the page.
-    var refreshInterval = 10000; // 60 seconds (adjust as needed)
+        // Function to update the live score
+        function updateLiveScore() {
+            // You would replace this with an actual API call to get live score data
+            // Here, we're simulating live score data with a random score for demonstration purposes.
+            const score = Math.floor(Math.random() * 10);
 
-    function checkForCommit() {
-        // Make an HTTP request to check if a commit has occurred.
-        // You can use an API endpoint or any method to check for a commit.
-        // For demonstration purposes, we're using a sample API.
-        fetch('https://https://motify.vercel.app//commit-check')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                if (data.commitOccurred) {
-                    // A commit has occurred; refresh the page.
-                    location.reload();
-                }
-            })
-            .catch(function (error) {
-                console.error('Error checking for commits: ', error);
-            });
-    }
+            // Display the score in the "live-score" div
+            document.getElementById("live-score").innerText = `Score: ${score}`;
+        }
 
-    // Call the checkForCommit function at the specified interval.
-    setInterval(checkForCommit, refreshInterval);
-})();
-    
+        // Update the live score every few seconds (e.g., every 10 seconds)
+        setInterval(updateLiveScore, 10000); // 10000 milliseconds = 10 seconds
     </script>
 </body>
 </html>
