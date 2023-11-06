@@ -1,56 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        /* Add some basic styling to the table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        /* Style the table headers (th) */
-        th {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* Style the table data cells (td) */
-        td {
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* Add some spacing between the logos and text */
-        .logo {
-            margin-right: 10px;
-        }
-
-        /* Apply styles to logos */
-        .logo img {
-            max-width: 50px;
-        }
-    </style>
+    <title>ICC World Cup Live Score</title>
 </head>
 <body>
-    <h1>Stylish Logo vs Logo Table</h1>
+    <h1>ICC World Cup Live Score</h1>
     <table border="1">
         <tr>
-            <th>Left Logo</th>
-            <th>Content</th>
-            <th>Right Logo</th>
+            <th>Match</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Score</th>
         </tr>
         <tr>
-            <td class="logo"><img src="left-logo.png" alt="Left Logo"></td>
-            <td>Table Cell 1</td>
-            <td class="logo"><img src="right-logo.png" alt="Right Logo"></td>
+            <td>Match 1</td>
+            <td>Team A</td>
+            <td>Team B</td>
+            <td id="match1-score">Fetching live score...</td>
         </tr>
         <tr>
-            <td class="logo"><img src="left-logo.png" alt="Left Logo"></td>
-            <td>Table Cell 2</td>
-            <td class="logo"><img src="right-logo.png" alt="Right Logo"></td>
+            <td>Match 2</td>
+            <td>Team X</td>
+            <td>Team Y</td>
+            <td id="match2-score">Fetching live score...</td>
         </tr>
+        <!-- Add more match rows as needed -->
     </table>
+
+    <script>
+        // You need to implement JavaScript code here to fetch and update the live scores from a sports data API.
+        // The code will periodically update the score values in the "td" elements with IDs like "match1-score", "match2-score," etc.
+        // You may use technologies like AJAX or Fetch to make API requests for live score updates.
+        // Make sure to replace "Fetching live score..." with actual live score data.
+    </script>
 </body>
 </html>
