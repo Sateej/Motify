@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Live Score Example</title>
-</head>
-<body>
-    <h1>Live Score</h1>
-    <div id="live-score"></div>
-
-    <script>
-        // Function to update the live score
-        function updateLiveScore() {
-            // You would replace this with an actual API call to get live score data
-            // Here, we're simulating live score data with a random score for demonstration purposes.
-            const score = Math.floor(Math.random() * 10);
-
-            // Display the score in the "live-score" div
-            document.getElementById("live-score").innerText = `Score: 1000`;
+    <style>
+        /* Add some basic styling to the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        // Update the live score every few seconds (e.g., every 10 seconds)
-        setInterval(updateLiveScore, 10000); // 10000 milliseconds = 10 seconds
-    </script>
+        /* Style the table headers (th) */
+        th {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Style the table data cells (td) */
+        td {
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Add some spacing between the logos and text */
+        .logo {
+            margin-right: 10px;
+        }
+
+        /* Apply styles to logos */
+        .logo img {
+            max-width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stylish Logo vs Logo Table</h1>
+    <table border="1">
+        <tr>
+            <th>Left Logo</th>
+            <th>Content</th>
+            <th>Right Logo</th>
+        </tr>
+        <tr>
+            <td class="logo"><img src="left-logo.png" alt="Left Logo"></td>
+            <td>Table Cell 1</td>
+            <td class="logo"><img src="right-logo.png" alt="Right Logo"></td>
+        </tr>
+        <tr>
+            <td class="logo"><img src="left-logo.png" alt="Left Logo"></td>
+            <td>Table Cell 2</td>
+            <td class="logo"><img src="right-logo.png" alt="Right Logo"></td>
+        </tr>
+    </table>
 </body>
 </html>
