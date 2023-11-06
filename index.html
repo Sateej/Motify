@@ -5,10 +5,26 @@
 </head>
 <body>
     <h1>Sateej</h1>
+	  <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+        </tr>
+        <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+        </tr>
     <script>
 	(function () {
     // Set the interval (in milliseconds) at which you want to check for changes and refresh the page.
-    var refreshInterval = 600; // 60 seconds (adjust as needed)
+    var refreshInterval = 10000; // 60 seconds (adjust as needed)
 
     function checkForCommit() {
         // Make an HTTP request to check if a commit has occurred.
