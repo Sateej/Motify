@@ -6,14 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click NEWS</title>
         <style>@media (max-width: 768px) {
-    /* CSS for screens up to 768px wide */
 }
 
 @media (max-width: 576px) {
-    /* CSS for screens up to 576px wide (typically mobile) */
-}</style>
+    
+}
+         .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .navbar a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .navbar .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .navbar a:not(:first-child) {display: none;}
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .navbar.responsive {
+        position: relative;
+      }
+
+      .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .navbar.responsive a {
+        display: block;
+        text-align: left;
+      }
+    }</style>
 </head>
 <body>
-    
+    <div class="navbar" id="myNavbar">
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 </body>
 </html>
